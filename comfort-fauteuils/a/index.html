@@ -7,7 +7,7 @@
 /* Layout: woonwinkel-uitstraling — grote sfeerfoto's, rustig wit, zandkleurige en perzik vlakken, donkere knoppen. Eén bewust licht thema (voorbeeld van een klantsite). */
 :root{
   --white:#FFFFFF; --ink:#1C1B19; --muted:#5B5853; --sand:#F5F1EB; --peach:#F2EBDF; --line:#E3DED6;
-  --dark:#7A1F2B; --dark-hover:#8E2734; --accent:#7E6030; --gold:#C79A45;
+  --dark:#B22222; --dark-hover:#9A1C1C; --accent:#7E6030; --gold:#C79A45;
   --font:'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   color-scheme: light;
 }
@@ -240,9 +240,9 @@ strong{font-weight:600}
 :root{--shadow-1:0 1px 2px rgba(28,27,25,.06),0 4px 12px rgba(28,27,25,.06);--shadow-2:0 2px 4px rgba(28,27,25,.06),0 14px 34px rgba(28,27,25,.12);--ease:cubic-bezier(.2,.7,.2,1)}
 /* 3D-knoppen: een zichtbare onderrand die indrukt bij klikken */
 .btn{position:relative;transition:transform .18s var(--ease),box-shadow .18s var(--ease),background .18s ease;will-change:transform}
-.btn-dark{background:linear-gradient(180deg,#8E2734 0%,#7A1F2B 100%);color:#FFFFFF;border:1.5px solid #C79A45;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -2px 0 rgba(0,0,0,.18),1px 2px 3px rgba(60,14,20,.16),3px 8px 18px rgba(60,14,20,.16)}
-.btn-dark:hover{background:linear-gradient(180deg,#9C2C3A 0%,#84222F 100%);color:#FFFFFF;border-color:#D4A54E;transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 -2px 0 rgba(0,0,0,.18),1px 3px 5px rgba(60,14,20,.14),4px 14px 26px rgba(60,14,20,.2)}
-.btn-dark:active{transform:translateY(1px);box-shadow:inset 0 1px 3px rgba(0,0,0,.3),0 1px 2px rgba(60,14,20,.12)}
+.btn-dark{background:linear-gradient(180deg,#C02B2B 0%,#B22222 100%);color:#FFFFFF;border:1.5px solid #C79A45;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -2px 0 rgba(0,0,0,.18),1px 2px 3px rgba(90,17,17,.16),3px 8px 18px rgba(90,17,17,.16)}
+.btn-dark:hover{background:linear-gradient(180deg,#B22222 0%,#9A1C1C 100%);color:#FFFFFF;border-color:#D4A54E;transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 -2px 0 rgba(0,0,0,.18),1px 3px 5px rgba(90,17,17,.14),4px 14px 26px rgba(90,17,17,.2)}
+.btn-dark:active{transform:translateY(1px);box-shadow:inset 0 1px 3px rgba(0,0,0,.3),0 1px 2px rgba(90,17,17,.12)}
 .btn-dark svg{color:#D4A54E}
 .btn-line{background:var(--white);box-shadow:1px 2px 3px rgba(28,27,25,.06),3px 8px 18px rgba(28,27,25,.07)}
 .btn-line:hover{background:var(--white);transform:translateY(-2px);box-shadow:1px 3px 5px rgba(28,27,25,.06),4px 14px 26px rgba(28,27,25,.09)}
@@ -416,16 +416,16 @@ h1,h2,.brand-body h3,.quote blockquote{font-family:"Fraunces",Georgia,"Times New
 }
 
 /* Logo van de klant */
-.logo-img{display:block;height:58px;width:auto;max-width:260px;object-fit:contain}
+.logo-img{display:block;height:56px;width:auto;max-width:260px;object-fit:contain}
 .logo-txt{display:flex;flex-direction:column;line-height:1.05}
 .logo-foot{display:block;height:54px;width:auto;max-width:240px;object-fit:contain;background:#fff;padding:8px 12px;border-radius:8px;margin-bottom:6px}
-@media (max-width:480px){.logo-img{height:44px;max-width:170px}}
+@media (max-width:480px){.logo-img{height:40px;max-width:160px}}
 </style>
 
 <div style="background:#111;color:#fff;font:14px/1.4 system-ui,sans-serif;text-align:center;padding:8px 16px"><b>Ontwerpvoorstel door Newporter</b> · dit is (nog) niet de live website van POP Comfort Fauteuils</div><div class="topbar"><div class="wrap">Showroom in Sittard · demo aan huis in Noord-Limburg</div></div>
 
 <header class="header"><div class="wrap">
-<a class="logo" href="#home" aria-label="Comfort Fauteuils, naar home"><img class="logo-img" src="https://www.comfort-fauteuils.nl/images/huisstijl/comfort-fauteuils-logo-2018.png" alt="Comfort Fauteuils" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="logo-txt" hidden><b>Comfort Fauteuils</b><span>Sta-op-stoelen &amp; relaxfauteuils</span></span></a>
+<a class="logo" href="#home" aria-label="Comfort Fauteuils, naar home"><img class="logo-img" src="../logo.png" alt="Comfort Fauteuils" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="logo-txt" hidden><b>Comfort Fauteuils</b><span>Sta-op-stoelen &amp; relaxfauteuils</span></span></a>
 <div class="header-cta">
 <a class="btn btn-dark btn-sm" href="#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><span class="long">Plan een bezoek</span><span class="short">Bezoek</span></a>
 <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu openen"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -594,7 +594,7 @@ h1,h2,.brand-body h3,.quote blockquote{font-family:"Fraunces",Georgia,"Times New
 
 <footer class="footer"><div class="wrap">
 <div class="cols">
-<div><img class="logo-foot" src="https://www.comfort-fauteuils.nl/images/huisstijl/comfort-fauteuils-logo-2018.png" alt="Comfort Fauteuils" onerror="this.outerHTML='<strong style=&quot;font-size:22px&quot;>Comfort Fauteuils</strong>'"><span class="muted">Sta-op-stoelen en relaxfauteuils, showroom in Sittard en demo aan huis. Merken: Hjort Knudsen, Chill Line, Hukla en Releazz.</span></div>
+<div><img class="logo-foot" src="../logo.png" alt="Comfort Fauteuils" onerror="this.outerHTML='<strong style=&quot;font-size:22px&quot;>Comfort Fauteuils</strong>'"><span class="muted">Sta-op-stoelen en relaxfauteuils, showroom in Sittard en demo aan huis. Merken: Hjort Knudsen, Chill Line, Hukla en Releazz.</span></div>
 <div><strong>Stoelen</strong><a href="#categorieen">Relaxfauteuils</a><a href="#categorieen">Sta-op-stoelen</a><a href="#categorieen">Draaibare sta-op-stoelen</a><a href="#categorieen">Uitverkoop</a></div>
 <div><strong>Service</strong><a href="#showroom">Showroom</a><a href="#merken">Merken</a><a href="#faq">Veelgestelde vragen</a><a href="#over">Over ons</a></div>
 <div><strong>Contact</strong><span><a href="tel:+31778516322">077 851 63 22</a></span><span>info@comfort-fauteuils.nl</span><span>Kantoor Venlo-Blerick · showroom Sittard</span></div>
