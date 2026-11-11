@@ -353,6 +353,67 @@ strong{font-weight:600}
 .story-quote::before{content:"";display:block;width:56px;height:2px;background:var(--gold);margin-bottom:24px}
 .story-quote cite{display:block;margin-top:18px;font-style:normal;font-size:17px;font-weight:600;color:var(--muted)}
 @media (max-width:640px){.story{gap:48px}.story-text p{font-size:16px}.story-quote{font-size:20px}}
+
+/* Echte productfoto's (witte achtergrond): stoel volledig in beeld */
+.photo.shot{background-color:#fff;background-size:contain;background-origin:content-box;padding:18px}
+.cats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.cats .cat,.cats .cat:nth-child(n+4){grid-column:span 1!important}
+.cats .cat .photo,.cats .cat:nth-child(n+4) .photo{aspect-ratio:16/10!important}
+@media (max-width:620px){.cats{grid-template-columns:minmax(0,1fr)!important}}
+.cat .cat-tag{align-self:flex-start;font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.feature .photo.shot,.about .photo.shot{border-radius:12px;box-shadow:var(--shadow-2)}
+.duo-card .photo.shot{padding:14px}
+
+/* Merken-carrousel */
+.brands{background:var(--sand)}
+.car{position:relative}
+.car-track{display:grid;grid-auto-flow:column;grid-auto-columns:min(100%,560px);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 20px}
+.car-track::-webkit-scrollbar{display:none}
+.brand{scroll-snap-align:start;background:var(--white);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-1)}
+.brand .photo{aspect-ratio:16/10}
+.brand-body{padding:26px 30px 30px;display:flex;flex-direction:column;gap:10px;flex:1}
+.brand-body .from{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.brand-body h3{font-size:28px}
+.brand-body p{color:var(--muted);font-size:17px;line-height:1.5}
+.brand-body .link-arrow{margin-top:auto;align-self:flex-start}
+.car-nav{display:flex;gap:10px}
+.car-btn{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--ink);background:var(--white);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s ease}
+.car-btn:hover{background:var(--peach)}
+.car-dots{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.car-dots button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
+.car-dots button[aria-current="true"]{background:var(--gold);width:28px;border-radius:6px}
+@media (max-width:640px){.car-track{grid-auto-columns:86%}.brand-body{padding:22px}.brand-body h3{font-size:24px}.brand-body p{font-size:16px}}
+
+/* Fotowand collectie */
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.wall{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.wall figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.wall .photo{aspect-ratio:1/1;border-radius:14px;box-shadow:var(--shadow-1)}
+.wall figcaption{font-size:16px;font-weight:600}
+.wall figcaption span{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.hours{display:flex;flex-direction:column;gap:4px;font-size:17px;margin-top:8px}
+.hours b{font-weight:600}
+
+/* Chiquere koppen */
+@font-face{font-family:"Fraunces";src:url(../../assets/fonts/fraunces-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(../../assets/fonts/fraunces-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+h1,h2,.brand-body h3,.quote blockquote{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-0.015em}
+
+/* Hero: binnen het eerste scherm, tekstvlak rechts */
+.hero{min-height:0!important;height:clamp(440px,calc(100svh - 205px),620px)}
+.hero .photo{background-position:30% 40%}
+.hero > .wrap{display:flex;justify-content:flex-end}
+.hero-card{max-width:500px;padding:34px 36px;gap:14px;margin-block:0;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);box-shadow:0 20px 50px rgba(28,27,25,.18)}
+.hero-card h1{font-size:clamp(34px,3.3vw,48px);line-height:1.08}
+.hero-card .lead{font-size:18px;line-height:1.5}
+.hero-card .btn{min-height:54px;padding:0 24px;font-size:17px}
+@media (max-width:640px){
+  .hero{height:auto}
+  .hero > .wrap{display:block}
+  .hero .photo{height:240px}
+  .hero-card{margin:-40px 0 0;padding:24px 22px;box-shadow:none}
+  .hero-card h1{font-size:30px}
+}
 </style>
 
 <div style="background:#111;color:#fff;font:14px/1.4 system-ui,sans-serif;text-align:center;padding:8px 16px"><b>Ontwerpvoorstel door Newporter</b> · dit is (nog) niet de live website van POP Comfort Fauteuils</div><div class="topbar"><div class="wrap">Showroom in Sittard · demo aan huis in Noord-Limburg</div></div>
@@ -360,18 +421,19 @@ strong{font-weight:600}
 <header class="header"><div class="wrap">
 <a class="logo" href="#home"><b>Comfort Fauteuils</b><span>Sta-op-stoelen &amp; relaxfauteuils</span></a>
 <div class="header-cta">
-<a class="btn btn-dark btn-sm" href="#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><span class="long">Demo aan huis</span><span class="short">Demo</span></a>
+<a class="btn btn-dark btn-sm" href="#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><span class="long">Plan een bezoek</span><span class="short">Bezoek</span></a>
 <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu openen"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div>
 </div>
 <nav class="nav" id="nav" aria-label="Hoofdmenu"><div class="wrap">
+<a href="#categorieen">Relaxfauteuils</a>
 <a href="#categorieen">Sta-op-stoelen</a>
-<a href="#categorieen">Relaxstoelen</a>
-<a href="#categorieen">Stoelen op maat</a>
-<a href="#over">Over ons</a>
-<a href="#faq">Veelgestelde vragen</a>
+<a href="#categorieen">Draaibare sta-op-stoelen</a>
+<a href="#categorieen">Uitverkoop</a>
+<a href="#merken">Merken</a>
+<a href="#showroom">Showroom</a>
 <a href="#contact">Contact</a>
-<p class="nav-extra">Merken: Releazz, Hukla, Hjort Knudsen en Chill Line · Bel <a href="tel:+31778516322">077 851 63 22</a></p>
+<p class="nav-extra">Hjort Knudsen, Chill Line, Hukla en Releazz · Bel <a href="tel:+31778516322">077 851 63 22</a></p>
 </div></nav>
 </header>
 
@@ -383,45 +445,70 @@ strong{font-weight:600}
 <div class="wrap" style="width:100%">
 <div class="hero-card">
 <h1>Sta-op-stoelen en relaxfauteuils in Limburg</h1>
-<p class="lead">Mobiel beperkt en op zoek naar een comfortabele relaxstoel van kwaliteit met sta-op-hulp? Bekijk de collectie in onze showroom in Sittard, of vraag een demo aan huis in Noord-Limburg.</p>
-<div class="btns"><a class="btn btn-dark" href="#contact">Vraag een demo aan huis</a><a class="btn btn-line" href="#categorieen">Bekijk de stoelen</a></div>
+<p class="lead">A-merken als Hjort Knudsen, Chill Line, Hukla en Releazz. Proefzitten in onze showroom in Sittard of met een demo bij u thuis.</p>
+<div class="btns"><a class="btn btn-dark" href="#contact">Plan een bezoek</a><a class="btn btn-line" href="#categorieen">Bekijk de stoelen</a></div>
 </div>
 </div>
 </section>
 
 <div class="trust"><div class="wrap">
-<div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 17 3l4 4L7 21H3z"/><path d="m7 13 2 2M10 10l2 2M13 7l2 2"/></svg>Op uw maten gemaakt</div>
-<div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10"/></svg>Proefzitten bij u thuis</div>
 <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Geen aanbetaling</div>
-<div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>Laagste prijsgarantie</div>
+<div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12V7H4v5"/><path d="M4 12h16v7H4z"/><path d="M9 16h6"/></svg>Laagste prijsgarantie</div>
+<div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Snelle levering</div>
+<div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10"/></svg>Demo aan huis</div>
 </div></div>
 
 <section class="section" id="categorieen"><div class="wrap">
 <div class="head-row">
-<div class="stack" style="max-width:640px"><h2>Ontdek de stoelen</h2><p class="muted">Kwaliteitsstoelen van Releazz, Hukla, Hjort Knudsen en Chill Line. Kijk rustig rond en laat u gratis en vrijblijvend adviseren.</p></div>
+<div class="stack" style="max-width:640px"><h2>Ontdek de stoelen</h2><p class="muted">Van verstelbare relaxfauteuil tot sta-op-stoel die met u meedraait. Kijk rustig rond en laat u gratis en vrijblijvend adviseren.</p></div>
 <a class="link-arrow" href="#contact">Vraag advies</a>
 </div>
 <div class="cats">
-<a class="cat" href="#contact"><div class="photo"><span class="ph-label">Foto sta-op-stoel</span></div><div class="cat-body"><strong>Sta-op-stoelen</strong><span class="muted">Met één knop rustig en veilig overeind</span><span class="cat-link">Vraag advies</span></div></a>
-<a class="cat" href="#contact"><div class="photo"><span class="ph-label">Foto relaxstoel</span></div><div class="cat-body"><strong>Relaxstoelen</strong><span class="muted">Ontspannen met verstelbare rug en voetensteun</span><span class="cat-link">Vraag advies</span></div></a>
-<a class="cat" href="#contact"><div class="photo"><span class="ph-label">Foto stoel op maat</span></div><div class="cat-body"><strong>Stoelen op maat</strong><span class="muted">Afgestemd op uw lengte en zithouding</span><span class="cat-link">Vraag advies</span></div></a>
-<a class="cat" href="#contact"><div class="photo"><span class="ph-label">Foto seniorenstoel</span></div><div class="cat-body"><strong>Seniorenstoelen</strong><span class="muted">Hoge zit, makkelijk in en uit</span><span class="cat-link">Vraag advies</span></div></a>
-<a class="cat" href="#contact"><div class="photo"><span class="ph-label">Foto categorie 5</span></div><div class="cat-body"><strong>Draaibare sta-op-stoelen</strong><span class="muted">Draait mee, zodat u makkelijk opstaat</span><span class="cat-link">Vraag advies</span></div></a>
+<a class="cat" href="#contact"><div class="photo shot" role="img" aria-label="Relaxfauteuil Concept" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Concept/Relaxfauteuil-Concept.jpg)"></div><div class="cat-body"><strong>Relaxfauteuils</strong><span class="muted">Verstelbaar met motor, topswing of draaivoet</span><span class="cat-link">Bekijk relaxfauteuils</span></div></a>
+<a class="cat" href="#contact"><div class="photo shot" role="img" aria-label="Sta-op-stoel Varia" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Sta-op-stoel-Varia/Sta-op-stoel-Varia.jpg)"></div><div class="cat-body"><strong>Sta-op-stoelen</strong><span class="muted">Met elektrische sta-op-hulp rustig en veilig overeind</span><span class="cat-link">Bekijk sta-op-stoelen</span></div></a>
+<a class="cat" href="#contact"><div class="photo shot" role="img" aria-label="Draaibare sta-op-stoel EC" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Sta-op-draaistoel-EC/Sta-op-draaistoel-EC.jpg)"></div><div class="cat-body"><strong>Draaibare sta-op-stoelen</strong><span class="muted">Draaibaar en met relaxfuncties, voor makkelijk in- en uitstappen</span><span class="cat-link">Bekijk draaibare modellen</span></div></a>
+<a class="cat" href="#contact"><div class="photo shot" role="img" aria-label="Relaxfauteuil Moonlight" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Moonlight/Relaxfauteuil-Moonlight.jpg)"></div><div class="cat-body"><span class="cat-tag">Uitverkoop</span><strong>Showroommodellen en aanbiedingen</strong><span class="muted">Kwaliteitsstoelen met korting, zolang de voorraad strekt</span><span class="cat-link">Bekijk de uitverkoop</span></div></a>
+</div>
+</div></section>
+
+<section class="section brands" id="merken"><div class="wrap">
+<div class="head-row">
+<div class="stack" style="max-width:640px"><span class="eyebrow">Onze merken</span><h2>Vier A-merken, één showroom</h2><p class="muted">Uit Scandinavië, Nederland en Duitsland. Elk merk met een eigen karakter.</p></div>
+<div class="car-nav"><button type="button" class="car-btn" id="car-prev" aria-label="Vorig merk"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" class="car-btn" id="car-next" aria-label="Volgend merk"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+</div>
+<div class="car">
+<div class="car-track" id="car-track" tabindex="0" aria-label="Merken">
+<article class="brand" id="merk-0"><div class="photo shot" role="img" aria-label="Hjort Knudsen: Hjort Knudsen relaxfauteuil uit de collectie" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Danish-design/Relaxfauteuil-Danish-design.jpg)"></div><div class="brand-body"><span class="from">Scandinavië</span><h3>Hjort Knudsen</h3><p>Een van de grootste Scandinavische fabrikanten van gestoffeerde meubels. Danish design, van strak modern tot tijdloos klassiek.</p><p>Elk model in drie zitmaten, handmatig of elektrisch, en desgewenst met lift- of sta-op-functie.</p><a class="link-arrow" href="#contact">Bekijk Hjort Knudsen in de showroom</a></div></article>
+<article class="brand" id="merk-1"><div class="photo shot" role="img" aria-label="Chill Line: Chill Line relaxfauteuil uit de collectie" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Lounge-fauteuil-Klaas/Chill-line-Klaas.jpg)"></div><div class="brand-body"><span class="from">Nederland</span><h3>Chill Line</h3><p>Exclusief topmerk van Nederlandse bodem, ontworpen door de designers van DS Meubel. Verstelbare loungefauteuils met uniek relaxcomfort.</p><p>Tot in detail te personaliseren, zelfs de stiknaden.</p><a class="link-arrow" href="#contact">Bekijk Chill Line in de showroom</a></div></article>
+<article class="brand" id="merk-2"><div class="photo shot" role="img" aria-label="Hukla: Hukla relaxfauteuil uit de collectie" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Cosy-art/Relaxfauteuil-Cosy-art.jpg)"></div><div class="brand-body"><span class="from">Duitsland</span><h3>Hukla</h3><p>Hoogwaardig Duits A-merk in verstelbare relaxfauteuils en sta-op-stoelen, met gepatenteerd speciaalschuim en 10 jaar garantie daarop.</p><p>Grote modelkeuze en maatwerk: rugleuning en armleuningen zijn te wisselen.</p><a class="link-arrow" href="#contact">Bekijk Hukla in de showroom</a></div></article>
+<article class="brand" id="merk-3"><div class="photo shot" role="img" aria-label="Releazz: Releazz relaxfauteuil uit de collectie" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Feelz/Relaxfauteuil-Feelz.jpg)"></div><div class="brand-body"><span class="from">Maatwerk</span><h3>Releazz</h3><p>Luxe maatwerk relaxfauteuils en verstelbare stoelen voor een hoog zitcomfort.</p><p>Ook als wellness-stoel met massage of verwarming, met zero-gravity-stand of sta-op-systeem.</p><a class="link-arrow" href="#contact">Bekijk Releazz in de showroom</a></div></article>
+</div>
+<div class="car-dots" id="car-dots"></div>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="feature">
+<div class="photo shot" role="img" aria-label="Sta-op-stoel Actisit" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Sta-op-stoel-Actisit/Sta-op-stoel-Actisit.jpg)"></div>
+<div class="stack"><h2>Makkelijk opstaan</h2><p class="lead">Een sta-op-stoel heeft een elektrische sta-op-hulp. Met één knop kantelt de stoel rustig naar voren en komt u zonder kracht overeind.</p><a class="link-arrow" href="#categorieen" style="align-self:flex-start">Bekijk sta-op-stoelen</a></div>
+</div>
+<div class="feature flip">
+<div class="photo shot" role="img" aria-label="Sta-op-stoel op maat" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Staopstoel-op-maat/Staopstoel-op-maat.jpg)"></div>
+<div class="stack"><h2>Op maat gemaakt</h2><p class="lead">Bij merken als Releazz en Hukla wordt uw stoel afgestemd op uw lengte, gewicht, eventuele klachten en smaak. Zo zit u goed ondersteund.</p><a class="link-arrow" href="#contact" style="align-self:flex-start">Vraag gratis advies</a></div>
 </div>
 </div></section>
 
 <section class="section" style="padding-top:0"><div class="wrap">
-<div class="feature">
-<div class="photo"><span class="ph-label">Sfeerfoto: stoel kantelt rustig naar voren</span></div>
-<div class="stack"><h2>Makkelijk opstaan</h2><p class="lead">Met één knop kantelt de stoel rustig naar voren en komt u zonder kracht overeind. Net zo rustig laat hij u weer zakken.</p><a class="link-arrow" href="#contact" style="align-self:flex-start">Meer over sta-op-stoelen</a></div>
-</div>
-<div class="feature flip">
-<div class="photo"><span class="ph-label">Sfeerfoto: maten opnemen bij de stoel</span></div>
-<div class="stack"><h2>Gemaakt op uw maten</h2><p class="lead">Zithoogte, zitdiepte en breedte worden afgestemd op uw lichaam. Zo zit u goed ondersteund en staan uw voeten plat op de grond.</p><a class="link-arrow" href="#contact" style="align-self:flex-start">Bekijk een voorbeeldmodel</a></div>
-</div>
-<div class="feature">
-<div class="photo"><span class="ph-label">Sfeerfoto: onze adviseur met proefstoel bij een klant thuis</span></div>
-<div class="stack"><h2>Gewoon thuis proefzitten</h2><p class="lead">Wij komen met een stoel bij u langs, in de regio Noord-Limburg. U probeert hem in uw eigen kamer, op uw eigen plek. Liever meer modellen zien? Kom dan naar de showroom.</p><a class="link-arrow" href="#contact" style="align-self:flex-start">Plan een demo aan huis</a></div>
+<div class="head-row"><div class="stack" style="max-width:640px"><h2>Uit de collectie</h2><p class="muted">Een greep uit de modellen. In de showroom staat een selectie klaar om proef te zitten.</p></div><a class="link-arrow" href="#contact">Plan een bezoek</a></div>
+<div class="wall">
+<figure><div class="photo shot" role="img" aria-label="Model Elegant" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Sta-op-stoel-Elegant/Sta-op-stoel-Elegant.jpg)"></div><figcaption>Elegant<span>Sta-op-stoel</span></figcaption></figure>
+<figure><div class="photo shot" role="img" aria-label="Model Balance" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Balance/Relaxfauteuil-Balance.jpg)"></div><figcaption>Balance<span>Hjort Knudsen</span></figcaption></figure>
+<figure><div class="photo shot" role="img" aria-label="Model Barbara" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Barbara/Relaxfauteuil-Barbara.jpg)"></div><figcaption>Barbara<span>Chill Line</span></figcaption></figure>
+<figure><div class="photo shot" role="img" aria-label="Model Solid" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Draai-sta-op-stoel-Solid/Draai-sta-op-stoel-Solid.jpg)"></div><figcaption>Solid<span>Draaibare sta-op-stoel</span></figcaption></figure>
+<figure><div class="photo shot" role="img" aria-label="Model Canyon" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Canyon/Relaxfauteuil-Canyon.jpg)"></div><figcaption>Canyon<span>Hukla</span></figcaption></figure>
+<figure><div class="photo shot" role="img" aria-label="Model Dreamzz" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Sta-op-stoel-Dreamzz/Sta-op-stoel-Dreamzz.jpg)"></div><figcaption>Dreamzz<span>Releazz, sta-op</span></figcaption></figure>
+<figure><div class="photo shot" role="img" aria-label="Model Stylish" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Stylish/Relaxfauteuil-Stylish.jpg)"></div><figcaption>Stylish<span>Hjort Knudsen</span></figcaption></figure>
+<figure><div class="photo shot" role="img" aria-label="Model Oscar" style="background-image:url(https://www.comfort-fauteuils.nl/images/Staopstoelen/Staopstoel-Oscar/Staopstoel-Oscar.jpg)"></div><figcaption>Oscar<span>Sta-op-stoel</span></figcaption></figure>
 </div>
 </div></section>
 
@@ -431,14 +518,13 @@ strong{font-weight:600}
 
 <section class="section" id="over"><div class="wrap">
 <div class="about">
-<div class="photo"><span class="ph-label">Portret: onze adviseur bij een stoel</span></div>
+<div class="photo shot" role="img" aria-label="Chill Line relaxfauteuil Klaas" style="background-image:url(https://www.comfort-fauteuils.nl/images/algemeen/Klaas-Chill-line.jpg)"></div>
 <div class="stack">
 <span class="eyebrow">Over ons</span>
-<h2>Persoonlijk advies, van showroom tot levering</h2>
-<p class="lead">Ik heb jarenlang gewerkt bij een fabrikant van zitmeubelen voor ouderen. Daar zag ik hoeveel verschil een goede stoel maakt, en hoe lastig kiezen is in een grote winkel.</p>
-<p class="muted">[Uw eigen verhaal: wie u bent, sinds wanneer, en wat u belangrijk vindt.]</p>
-<p class="muted">Bij mij heeft u één aanspreekpunt. Ik adviseer, regel de bestelling, lever de stoel thuis af en kom terug als er iets is.</p>
-<div class="dealer"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg><div><b>Merken: Releazz, Hukla, Hjort Knudsen en Chill Line</b><span class="small">Oud-medewerker en nu zelfstandig dealer. [Logo Chill Line]</span></div></div>
+<h2>Eerlijk advies, snel geleverd</h2>
+<p class="lead">Comfort Fauteuils adviseert gratis en vrijblijvend over sta-op-stoelen en relaxfauteuils. U betaalt niets vooraf, krijgt volledige garantie en een snelle levering.</p>
+<p class="muted">In de showroom in Sittard staat een selectie van de collectie. Ons kantoor in Venlo-Blerick is er voor informatie, service en afspraken.</p>
+<div class="dealer"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg><div><b>5,0 op Google</b><span class="small">Op basis van 16 reviews</span></div></div>
 </div>
 </div>
 </div></section>
@@ -446,55 +532,53 @@ strong{font-weight:600}
 <section class="section" style="padding-top:0"><div class="wrap">
 <div class="head-row"><h2>Zo werkt het</h2></div>
 <ol class="steps">
-<li><span class="n">STAP 1</span><h3>U neemt contact op</h3><p class="muted">Bel of vul het formulier in. Onze adviseur belt u terug.</p></li>
-<li><span class="n">STAP 2</span><h3>Proefzitten</h3><p class="muted">Onze adviseur komt bij u thuis met een proefstoel, of gaat met u mee naar de showroom.</p></li>
-<li><span class="n">STAP 3</span><h3>Op maat geleverd</h3><p class="muted">Uw stoel wordt gemaakt en door onze adviseur thuis geplaatst, met uitleg over de bediening.</p></li>
+<li><span class="n">STAP 1</span><h3>U neemt contact op</h3><p class="muted">Bel of vul het formulier in. Wij nemen contact met u op voor een afspraak.</p></li>
+<li><span class="n">STAP 2</span><h3>Proefzitten</h3><p class="muted">In de showroom in Sittard, of met een demo bij u thuis in Noord-Limburg.</p></li>
+<li><span class="n">STAP 3</span><h3>Snel geleverd</h3><p class="muted">Geen aanbetaling vooraf, volledige garantie en een snelle levering.</p></li>
 </ol>
 </div></section>
 
-<section class="section peach"><div class="wrap">
-<div class="head-row"><div class="stack"><h2>Nog aan het twijfelen?</h2><p>Geen probleem. Neem rustig de tijd, of laat u helpen.</p></div></div>
+<section class="section peach" id="showroom"><div class="wrap">
+<div class="head-row"><div class="stack"><h2>Kom proefzitten</h2><p>Een stoel kiest u het best door erin te gaan zitten.</p></div></div>
 <div class="duo">
-<div class="duo-card"><div class="photo"><span class="ph-label">Beeld: showroom Sittard</span></div><div class="body"><h3>Showroom in Sittard</h3><p class="muted">Open op woensdag- en vrijdagmiddag. Andere dagen of tijden: op afspraak.</p><a class="link-arrow" href="#contact">Maak een afspraak</a></div></div>
-<div class="duo-card"><div class="photo photo-hero" style="background-position:50% 35%"></div><div class="body"><h3>Demo aan huis</h3><p class="muted">Onze adviseur komt met een stoel bij u langs. Vrijblijvend en zonder verkoopdruk.</p><a class="link-arrow" href="#contact">Plan een demo aan huis</a></div></div>
+<div class="duo-card"><div class="photo shot" role="img" aria-label="Relaxfauteuil Liberty" style="background-image:url(https://www.comfort-fauteuils.nl/images/Relaxstoelen/Relaxfauteuil-Liberty/Fauteuil-Liberty.jpg)"></div><div class="body"><h3>Showroom in Sittard</h3><p class="muted">Open op woensdag- en vrijdagmiddag. Andere dagen of tijden: op afspraak.</p><a class="link-arrow" href="#contact">Maak een afspraak</a></div></div>
+<div class="duo-card"><div class="photo photo-hero" style="background-position:50% 35%"></div><div class="body"><h3>Demo aan huis</h3><p class="muted">In de regio Noord-Limburg komen we met een stoel bij u langs. Vrijblijvend.</p><a class="link-arrow" href="#contact">Plan een demo aan huis</a></div></div>
 </div>
 </div></section>
 
 <section class="section" id="faq"><div class="wrap">
 <div class="head-row"><h2>Veelgestelde vragen</h2></div>
 <div class="faqs">
-<details class="faq" open><summary>Komt onze adviseur echt bij mij thuis?</summary><p>Ja. Onze adviseur komt met een stoel bij u langs, zodat u in uw eigen kamer kunt proefzitten. Wilt u meer modellen zien, dan gaat hij met u mee naar de showroom.</p></details>
-<details class="faq"><summary>Wat kost een sta-op-stoel?</summary><p>Dat hangt af van het model, de maat, de bekleding en de opties. Tijdens de afspraak hoort u eerlijk wat de stoel kost die bij u past, zonder verplichtingen.</p></details>
-<details class="faq"><summary>Krijg ik vergoeding via de WMO of mijn verzekering?</summary><p>Soms wel. Een sta-op-stoel valt meestal niet onder het basispakket, maar via de WMO of een aanvullende verzekering is soms een vergoeding mogelijk. Onze adviseur zoekt het samen met u uit.</p></details>
-<details class="faq"><summary>Wat is het verschil tussen 1 en 2 motoren?</summary><p>Met één motor bewegen rugleuning en voetensteun tegelijk. Met twee motoren stelt u ze apart in, bijvoorbeeld om rechtop te zitten met de benen omhoog.</p></details>
-<details class="faq"><summary>Hoe lang is de levertijd?</summary><p>Een stoel op maat wordt speciaal voor u gemaakt. Reken op ongeveer [x] weken. Onze adviseur levert hem zelf bij u thuis af.</p></details>
-<details class="faq"><summary>Wie helpt mij als er later iets is?</summary><p>Onze adviseur. Service en vragen na de levering lopen ook via hem, u hoeft niet naar een klantenservice te bellen.</p></details>
+<details class="faq" open><summary>Kan ik ook thuis proefzitten?</summary><p>Ja. In de regio Noord-Limburg komen we met een stoel bij u langs voor een demo aan huis. Wilt u meer modellen zien, kom dan naar de showroom in Sittard.</p></details>
+<details class="faq"><summary>Wat kost een sta-op-stoel?</summary><p>Dat hangt af van het merk, de maat, de bekleding en de opties. U betaalt niets vooraf en met onze laagste prijsgarantie weet u zeker dat u niet te veel betaalt.</p></details>
+<details class="faq"><summary>Wat is het verschil tussen een relaxfauteuil en een sta-op-stoel?</summary><p>Een relaxfauteuil is verstelbaar, bijvoorbeeld met motor of topswing. Een sta-op-stoel heeft daarnaast een elektrische sta-op-hulp die u helpt bij het opstaan.</p></details>
+<details class="faq"><summary>Waarom een draaibare sta-op-stoel?</summary><p>Een draaibare sta-op-stoel draait mee, zodat u makkelijker in- en uitstapt. De modellen hebben ook relaxfuncties.</p></details>
 </div>
 </div></section>
 
 <section class="section contact" id="contact" data-contact><div class="wrap contact-grid">
 <div class="stack">
-<h2>Plan een demo aan huis</h2>
-<p class="lead">Laat uw gegevens achter, dan belt onze adviseur u binnen [1 werkdag] terug om een moment af te spreken. Vrijblijvend en zonder verkoopdruk.</p>
+<h2>Plan een bezoek of demo</h2>
+<p class="lead">Laat uw gegevens achter, dan nemen wij contact met u op om een moment af te spreken. Vrijblijvend.</p>
 <div class="contact-list" style="margin-top:12px">
 <div><span>Bellen</span><a href="tel:+31778516322">077 851 63 22</a></div>
-
 <div><span>E-mail</span>info@comfort-fauteuils.nl</div>
 </div>
+<div class="hours"><b>Openingstijden</b><span>Kantoor Venlo-Blerick: ma t/m vr 10.00 – 17.00</span><span>Showroom Sittard: woensdag- en vrijdagmiddag, andere tijden op afspraak</span></div>
 </div>
 <div class="form-box">
-<div class="thanks form" role="status" hidden><h3>Dank u wel!</h3><p class="muted">Dit is een voorbeeld: op de echte site gaat uw aanvraag direct naar onze adviseur, die binnen [1 werkdag] contact met u opneemt.</p><button type="button" class="btn btn-line" data-reset style="align-self:flex-start">Terug naar het formulier</button></div>
+<div class="thanks form" role="status" hidden><h3>Dank u wel!</h3><p class="muted">Dit is een voorbeeld: op de echte site komt uw aanvraag direct bij Comfort Fauteuils binnen.</p><button type="button" class="btn btn-line" data-reset style="align-self:flex-start">Terug naar het formulier</button></div>
 <form class="form" data-form="home">
 <fieldset><legend>Waar heeft u voorkeur voor?</legend>
 <div class="choices">
-<label class="choice"><input type="radio" name="soort-home" id="soort-thuis-home" value="thuis" checked> Thuisdemo</label>
-<label class="choice"><input type="radio" name="soort-home" id="soort-showroom-home" value="showroom"> Samen naar de showroom</label>
-<label class="choice"><input type="radio" name="soort-home" id="soort-gids-home" value="gids"> Alleen de keuzegids</label>
+<label class="choice"><input type="radio" name="soort-home" id="soort-showroom-home" value="showroom" checked> Showroom Sittard</label>
+<label class="choice"><input type="radio" name="soort-home" id="soort-thuis-home" value="thuis"> Demo aan huis</label>
+<label class="choice"><input type="radio" name="soort-home" id="soort-advies-home" value="advies"> Telefonisch advies</label>
 </div></fieldset>
 <div class="field"><label for="naam-home">Uw naam</label><input type="text" id="naam-home" name="naam" autocomplete="name" required></div>
 <div class="field"><label for="tel-home">Telefoonnummer</label><input type="tel" id="tel-home" name="telefoon" autocomplete="tel" required></div>
 <div class="field"><label for="plaats-home">Woonplaats</label><input type="text" id="plaats-home" name="plaats" autocomplete="address-level2"></div>
-<div class="field"><label for="msg-home">Iets wat onze adviseur alvast moet weten? <span class="small">(niet verplicht)</span></label><textarea id="msg-home" name="bericht" rows="3"></textarea></div>
+<div class="field"><label for="msg-home">Waar bent u naar op zoek? <span class="small">(niet verplicht)</span></label><textarea id="msg-home" name="bericht" rows="3"></textarea></div>
 <button type="submit" class="btn btn-dark">Vraag afspraak aan</button>
 <span class="small">Uw gegevens worden alleen gebruikt om contact met u op te nemen.</span>
 </form>
@@ -502,16 +586,14 @@ strong{font-weight:600}
 </div></section>
 </main>
 
-<!-- ============ STA-OP-STOELEN ============ -->
-<!-- ============ PRODUCT ============ -->
 <footer class="footer"><div class="wrap">
 <div class="cols">
-<div><strong style="font-size:22px">Comfort Fauteuils</strong><span class="muted">Sta-op-stoelen en relaxstoelen op maat, met persoonlijk advies van Onze adviseur. Merken: Releazz, Hukla, Hjort Knudsen en Chill Line.</span></div>
-<div><strong>Stoelen</strong><a href="#contact">Sta-op-stoelen</a><a href="#categorieen">Relaxstoelen</a><a href="#categorieen">Stoelen op maat</a><a href="#categorieen">Seniorenstoelen</a></div>
-<div><strong>Service</strong><a href="#contact">Demo aan huis</a><a href="#faq">Veelgestelde vragen</a><a href="#over">Over ons</a><a href="#home">Privacyverklaring</a></div>
+<div><strong style="font-size:22px">Comfort Fauteuils</strong><span class="muted">Sta-op-stoelen en relaxfauteuils, showroom in Sittard en demo aan huis. Merken: Hjort Knudsen, Chill Line, Hukla en Releazz.</span></div>
+<div><strong>Stoelen</strong><a href="#categorieen">Relaxfauteuils</a><a href="#categorieen">Sta-op-stoelen</a><a href="#categorieen">Draaibare sta-op-stoelen</a><a href="#categorieen">Uitverkoop</a></div>
+<div><strong>Service</strong><a href="#showroom">Showroom</a><a href="#merken">Merken</a><a href="#faq">Veelgestelde vragen</a><a href="#over">Over ons</a></div>
 <div><strong>Contact</strong><span><a href="tel:+31778516322">077 851 63 22</a></span><span>info@comfort-fauteuils.nl</span><span>Kantoor Venlo-Blerick · showroom Sittard</span></div>
 </div>
-<div class="legal"><span>© Comfort Fauteuils · KvK 67697534</span><span>Ontwerpvoorstel door Newporter · teksten tussen [haken] en foto's volgen nog</span></div>
+<div class="legal"><span>© Comfort Fauteuils · KvK 67697534</span><span>Ontwerpvoorstel door Newporter · productfoto's van comfort-fauteuils.nl</span></div>
 </div></footer>
 
 <script>
@@ -524,7 +606,7 @@ strong{font-weight:600}
     if(target){ target.scrollIntoView({block:'start'}); } else { window.scrollTo(0,0); }
   }
   // links naar secties op de homepage: altijd eerst naar home
-  var homeIds=['categorieen','over','faq','contact'];
+  var homeIds=['categorieen','merken','showroom','over','faq','contact'];
   function route(hash){
     var h=(hash||'').replace('#','');
     if(!h||h==='home'){ show('home'); return; }
@@ -558,22 +640,25 @@ strong{font-weight:600}
     b.addEventListener('click', function(){ var box=b.closest('.form-box'); box.querySelector('.thanks').hidden=true; var f=box.querySelector('form'); f.hidden=false; f.reset(); });
   });
 
-  var thumbs=[].slice.call(document.querySelectorAll('.thumb')), cur=0;
-  function setPhoto(i){
-    cur=(i+thumbs.length)%thumbs.length;
-    thumbs.forEach(function(t,k){ t.setAttribute('aria-pressed', k===cur?'true':'false'); });
-    document.getElementById('g-img').hidden = cur!==0;
-    document.getElementById('g-ph').hidden = cur===0;
-    document.getElementById('g-label').textContent = thumbs[cur].getAttribute('data-label');
-  }
-  thumbs.forEach(function(t,k){ t.addEventListener('click', function(){ setPhoto(k); }); });
-  document.getElementById('g-prev').addEventListener('click', function(){ setPhoto(cur-1); });
-  document.getElementById('g-next').addEventListener('click', function(){ setPhoto(cur+1); });
 
+
+  // Merken-carrousel
+  var track=document.getElementById('car-track');
+  if(track){
+    var slides=[].slice.call(track.children), dots=document.getElementById('car-dots');
+    slides.forEach(function(s,i){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Merk '+(i+1)); b.addEventListener('click',function(){ go(i); }); dots.appendChild(b); });
+    function idx(){ var x=track.scrollLeft, best=0, d=1e9; slides.forEach(function(s,i){ var dd=Math.abs(s.offsetLeft-track.offsetLeft-x); if(dd<d){d=dd;best=i;} }); return best; }
+    function go(i){ i=(i+slides.length)%slides.length; track.scrollTo({left:slides[i].offsetLeft-track.offsetLeft,behavior:'smooth'}); }
+    function mark(){ var c=idx(); [].forEach.call(dots.children,function(b,k){ b.setAttribute('aria-current', k===c?'true':'false'); }); }
+    track.addEventListener('scroll', function(){ window.requestAnimationFrame(mark); });
+    document.getElementById('car-prev').addEventListener('click', function(){ go(idx()-1); });
+    document.getElementById('car-next').addEventListener('click', function(){ go(idx()+1); });
+    mark();
+  }
   // Subtiel kantelen van kaarten met de muis (niet op touch en niet bij 'minder beweging')
   var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  document.querySelectorAll('.cat, .duo-card, .prod, .usp').forEach(function(el){ el.classList.add('tilt'); });
+  document.querySelectorAll('.cat, .duo-card, .prod, .usp, .brand').forEach(function(el){ el.classList.add('tilt'); });
   if(!calm && finePointer){
     document.querySelectorAll('.tilt').forEach(function(el){
       el.addEventListener('mousemove', function(e){
@@ -584,7 +669,7 @@ strong{font-weight:600}
     });
   }
   // Blokken die rustig inschuiven
-  document.querySelectorAll('.cat, .feature, .steps li, .duo-card, .faq, .prod, .about > *, .feat-list > div, .quote blockquote, .head-row').forEach(function(el){ el.classList.add('reveal'); });
+  document.querySelectorAll('.cat, .feature, .steps li, .duo-card, .faq, .prod, .about > *, .feat-list > div, .quote blockquote, .head-row, .wall figure').forEach(function(el){ el.classList.add('reveal'); });
 })();
 </script>
 
