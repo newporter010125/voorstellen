@@ -421,19 +421,52 @@ h1,h2,.brand-body h3,.quote blockquote{font-family:"Fraunces",Georgia,"Times New
 .logo-foot{display:block;height:54px;width:auto;max-width:240px;object-fit:contain;background:#fff;padding:8px 12px;border-radius:8px;margin-bottom:6px}
 @media (max-width:480px){.logo-img{height:40px;max-width:160px}}
 
-/* Antraciet vlakken */
-.brands,.quote,.peach,.footer{background:#2A2B2E;color:#F3F1EF}
-.brands .head-row .muted,.peach .head-row p,.footer .muted,.footer .legal{color:#B8B5B2}
+
+/* ===== Huisstijl Comfort Fauteuils =====
+   Afgeleid van het logo: rood #B22222 en grijs #555555.
+   Wijnrood   #7E1D1D  logorood verdiept: alleen voor acties (knoppen) en het contactblok
+   Antraciet  #2B2C2E  logogrijs verdiept: topbalk, merkensectie, footer
+   Steengrijs #5A5C5E  het logogrijs: lopende tekst die zachter moet
+   Linnen     #F5F2EE  warm gebroken wit: rustige tussenvlakken
+   Messing    #A8875A  ingetogen goud: alleen dunne lijnen en kleine labels
+   Wit en inkt #1E1F21 voor de basis.
+   Regel: per scherm hooguit één groot gekleurd vlak; rood = "doe iets". */
+:root{
+  --ink:#1E1F21; --muted:#5A5C5E; --white:#FFFFFF;
+  --sand:#F5F2EE; --peach:#F5F2EE; --line:#E5E0DA;
+  --dark:#7E1D1D; --dark-hover:#661717;
+  --anthra:#2B2C2E; --anthra-2:#38393C;
+  --gold:#A8875A; --accent:#84663D;
+}
+body{color:var(--ink)}
+.btn-dark{background:var(--dark)!important;border:1.5px solid var(--dark)!important;color:#fff!important;box-shadow:0 1px 2px rgba(30,31,33,.18),0 8px 20px rgba(126,29,29,.20)!important}
+.btn-dark:hover{background:var(--dark-hover)!important;border-color:var(--dark-hover)!important}
+.btn-line{border-color:var(--ink)}
+.topbar{background:var(--anthra);border-bottom:1px solid var(--gold);font-weight:500;letter-spacing:.02em}
+.trust svg{color:var(--dark);box-shadow:inset 0 0 0 1px var(--line),0 4px 10px rgba(30,31,33,.06)}
+
+.brands,.footer{background:var(--anthra);color:#EDEBE8}
+.brands h2,.footer strong,.footer a{color:#FFFFFF}
+.brands .head-row .muted,.footer .muted,.footer .legal{color:#A9AAAD}
 .brands .eyebrow{color:var(--gold)}
-.quote cite{color:#D9D5D1}
-.car-btn{background:transparent;border-color:rgba(255,255,255,.7);color:#FFFFFF}
-.car-btn:hover{background:rgba(255,255,255,.1)}
-.car-dots button{background:rgba(255,255,255,.25)}
-.footer a,.footer strong{color:#F3F1EF}
-.footer .legal{border-top-color:rgba(255,255,255,.14)}
-.footer .logo-foot{box-shadow:none}
-.peach .duo-card,.brands .brand{color:var(--ink)}
-.peach .duo-card .muted{color:var(--muted)}
+.brands .brand{color:var(--ink)}
+.car-btn{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+.car-btn:hover{background:var(--anthra-2)}
+.car-dots button{background:rgba(255,255,255,.22)}
+.footer .legal{border-top-color:rgba(255,255,255,.12)}
+
+.quote,.peach{background:var(--sand);color:var(--ink)}
+.quote cite{color:var(--muted)}
+.peach .head-row p{color:var(--muted)}
+
+.feature .photo::before{background:var(--sand)!important;box-shadow:inset 0 0 0 1px var(--line)}
+.contact{background:var(--dark)}
+.contact .lead{color:#EBD3D3}
+.contact-list span,.hours b{color:#E2C9A0}
+.choice input{accent-color:var(--dark)}
+.form input[type=text],.form input[type=tel],.form textarea,.choice{border-color:#D3CEC8!important}
+.link-arrow{border-bottom-color:var(--gold)}
+.steps li{border-top-color:var(--gold)}
 </style>
 
 <div style="background:#111;color:#fff;font:14px/1.4 system-ui,sans-serif;text-align:center;padding:8px 16px"><b>Ontwerpvoorstel door Newporter</b> · dit is (nog) niet de live website van POP Comfort Fauteuils</div><div class="topbar"><div class="wrap">Showroom in Sittard · demo aan huis in Noord-Limburg</div></div>
