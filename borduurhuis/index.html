@@ -7,222 +7,7 @@
 <meta name="robots" content="noindex,nofollow,noarchive">
 <title>Borduren, textieldruk en reclame in Tilburg | Borduurhuis.nl</title>
 <meta name="description" content="Borduurhuis.nl in Tilburg: borduren en bedrukken van kleding en textiel, emblemen, belettering, drukwerk en stempels. Voor particulier en bedrijf, vanaf één stuk.">
-<style>
-@font-face{font-family:'Outfit';font-weight:500;font-display:swap;src:url(../assets/fonts/outfit-latin-500-normal.woff2) format('woff2')}
-@font-face{font-family:'Outfit';font-weight:600;font-display:swap;src:url(../assets/fonts/outfit-latin-600-normal.woff2) format('woff2')}
-@font-face{font-family:'Outfit';font-weight:700;font-display:swap;src:url(../assets/fonts/outfit-latin-700-normal.woff2) format('woff2')}
-@font-face{font-family:'Nunito Sans';font-weight:400;font-display:swap;src:url(../assets/fonts/nunito-sans-latin-400-normal.woff2) format('woff2')}
-@font-face{font-family:'Nunito Sans';font-weight:600;font-display:swap;src:url(../assets/fonts/nunito-sans-latin-600-normal.woff2) format('woff2')}
-@font-face{font-family:'Nunito Sans';font-weight:700;font-display:swap;src:url(../assets/fonts/nunito-sans-latin-700-normal.woff2) format('woff2')}
-:root{
- --blauw:#1d4f91;--blauw-d:#143a6c;--blauw-l:#eef3fa;--rood:#c82613;--rood-h:#a31e0f;
- --ink:#14213a;--text:#3a4152;--muted:#6a7183;--line:#e4e7ee;
- --hf:'Outfit',system-ui,sans-serif;--bf:'Nunito Sans',system-ui,sans-serif}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font:18px/1.6 var(--bf);color:var(--text);background:#fff;overflow-x:hidden}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-h1,h2,h3{font-family:var(--hf);font-weight:600;color:var(--ink);line-height:1.06;margin:0 0 .45em;letter-spacing:-.025em}
-h2{font-size:clamp(2rem,3.6vw,3.1rem)}
-h2 .b{color:var(--blauw)}
-h3{font-size:1.28rem;letter-spacing:-.01em}
-p{margin:0 0 1em}
-.wrap{width:min(1220px,100% - 40px);margin-inline:auto}
-:focus-visible{outline:3px solid var(--rood);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-.ic{width:20px;height:20px;flex:none}
-.kicker{display:inline-flex;align-items:center;gap:12px;font:700 13px/1 var(--bf);letter-spacing:.16em;text-transform:uppercase;color:var(--blauw);margin-bottom:18px}
-.kicker::before{content:"";width:38px;height:2px;background:repeating-linear-gradient(90deg,var(--rood) 0 7px,transparent 7px 11px)}
-.linnen{background-color:#fff;background-image:repeating-linear-gradient(0deg,rgba(29,79,145,.035) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(29,79,145,.035) 0 1px,transparent 1px 4px)}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font:700 16px/1 var(--bf);text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s;cursor:pointer}
-.btn:hover{transform:translateY(-1px)}
-.btn-rood{background:var(--rood);color:#fff;box-shadow:0 10px 24px -12px rgba(200,38,19,.7)}.btn-rood:hover{background:var(--rood-h)}
-.btn-lijn{border-color:var(--line);color:var(--ink);background:#fff}.btn-lijn:hover{border-color:var(--blauw);color:var(--blauw)}
-.btn-lijn .ic{color:var(--rood)}
-.ctas{display:flex;flex-wrap:wrap;gap:12px}
-
-.np{position:sticky;top:0;z-index:60;background:#111;color:#fff;font:500 13px/1.3 system-ui,sans-serif;text-align:center;padding:7px 12px}
-.np span{opacity:.72}
-.hd{position:sticky;top:31px;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hd .wrap{display:flex;align-items:center;gap:28px;min-height:82px}
-.label-logo{position:relative;display:flex;align-items:center;background:var(--blauw);padding:9px 20px;border-radius:4px;text-decoration:none;color:#fff;font:700 1.15rem var(--hf);box-shadow:0 6px 14px -8px rgba(20,58,108,.6)}
-.label-logo::before{content:"";position:absolute;inset:4px;border:1.5px dashed rgba(255,255,255,.55);border-radius:2px;pointer-events:none}
-.label-logo img{height:36px;width:auto;max-width:190px;object-fit:contain}
-.hd nav{display:flex;gap:28px;margin-left:auto;font-weight:600;font-size:15.5px;color:var(--ink)}
-.hd nav a{text-decoration:none;padding:6px 0}
-.hd nav a:hover{color:var(--blauw);text-decoration:underline dashed var(--rood);text-underline-offset:7px}
-.hd-tel{display:flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;white-space:nowrap;color:var(--blauw)}
-.hd .btn{min-height:46px;padding:0 22px;font-size:15px}
-
-.hero{position:relative;padding:70px 0 50px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(2.9rem,6.2vw,5.4rem);font-weight:700;letter-spacing:-.045em;line-height:.98;margin-bottom:.3em}
-.hero h1 .steek{color:transparent;-webkit-text-stroke:2px var(--rood);background:repeating-linear-gradient(90deg,var(--rood) 0 9px,transparent 9px 14px) left 96%/100% 3px no-repeat;padding-bottom:.1em}
-@supports not (-webkit-text-stroke:2px red){.hero h1 .steek{color:var(--rood)}}
-.hero h1 .blauw{color:var(--blauw)}
-.hero-lead{font-size:1.2rem;color:var(--text);max-width:31em;margin-bottom:30px}
-.hero-feiten{display:flex;margin-top:42px;border:1px solid var(--line);border-radius:16px;overflow:hidden;width:max-content;max-width:100%;background:#fff}
-.hero-feiten div{padding:16px 22px;border-right:1px dashed var(--line)}
-.hero-feiten div:last-child{border:0}
-.hero-feiten b{display:block;font:700 1.25rem/1.1 var(--hf);color:var(--blauw)}
-.hero-feiten span{font-size:14px;color:var(--muted)}
-
-.ring-zone{position:relative;display:flex;flex-direction:column;align-items:center}
-.ring{position:relative;width:min(470px,86%);aspect-ratio:1;border-radius:50%;background:#1d4f91;
- box-shadow:0 0 0 14px #d8b88a,0 0 0 17px #b8925f,0 0 0 26px #e7cfa7,0 0 0 28px #c39c69,0 40px 70px -20px rgba(20,33,58,.45)}
-.ring::before{content:"";position:absolute;inset:0;border-radius:50%;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px)}
-.ring-schroef{position:absolute;top:-44px;left:50%;transform:translateX(-50%);width:34px;height:22px;background:#c39c69;border-radius:6px 6px 2px 2px;box-shadow:inset 0 -6px 0 #a87f4e}
-.ring svg.borst{position:absolute;inset:0;width:100%;height:100%}
-.naald{position:absolute;right:2%;top:4%;width:120px;height:120px;pointer-events:none}
-.studio{position:relative;margin-top:58px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;box-shadow:0 18px 40px -26px rgba(20,33,58,.4);width:min(500px,100%)}
-.studio label{font:700 12.5px var(--bf);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;gap:7px}
-.studio input{font:600 17px var(--bf);padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;width:100%;color:var(--ink);letter-spacing:0;text-transform:none}
-.studio input:focus{outline:none;border-color:var(--blauw)}
-.kleuren{display:flex;gap:8px;padding-bottom:7px}
-.kleuren button{width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1.5px var(--line);cursor:pointer;padding:0}
-.kleuren button[aria-pressed=true]{box-shadow:0 0 0 2.5px var(--rood)}
-.studio small{grid-column:1/-1;color:var(--muted);font-size:13px;margin-top:-4px}
-
-.lint{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;background:#fff}
-.lint-in{display:inline-flex;animation:lint 40s linear infinite;padding:20px 0}
-.lint span{font:600 1.2rem var(--hf);color:var(--ink);display:inline-flex;align-items:center}
-.lint span:nth-child(3n+2){color:var(--blauw)}
-.lint span::after{content:"✕";font-size:.8rem;color:var(--rood);margin:0 26px}
-@keyframes lint{to{transform:translateX(-50%)}}
-
-.sec{padding:120px 0}
-.sec-head{max-width:760px;margin-bottom:56px}
-.sec-head p{color:var(--muted);font-size:1.12rem;margin:0}
-.sec-head.mid{margin-inline:auto;text-align:center}
-.sec-head.mid .kicker{justify-content:center}
-
-.amb-rij{display:grid;grid-template-columns:1fr 1fr;gap:34px}
-.amb{position:relative;border:1px solid var(--line);border-radius:26px;padding:34px;background:#fff;display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:center;transition:box-shadow .3s,transform .3s}
-.amb:hover{box-shadow:0 30px 60px -36px rgba(20,33,58,.45);transform:translateY(-3px)}
-.amb-foto{position:relative;width:184px;margin:8px;aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 7px #e7cfa7,0 0 0 9px #c39c69}
-.amb-foto img{width:100%;height:100%;object-fit:cover}
-.amb-nr{font:700 13px var(--bf);letter-spacing:.14em;color:var(--rood)}
-.amb h3{font-size:1.75rem;margin:.3em 0 .35em}
-.amb p{color:var(--muted);font-size:16.5px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
-.tags li{font:700 13.5px var(--bf);padding:6px 12px;border-radius:999px;background:var(--blauw-l);color:var(--blauw)}
-.pijl{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--rood);text-decoration:none;transition:gap .2s}
-.pijl:hover{gap:12px}
-
-.labels{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.lab{position:relative;padding:38px 34px 30px;background:#fff;border-radius:6px;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
-.lab::before{content:"";position:absolute;inset:7px;border:1.5px dashed #c9d4e6;border-radius:3px;pointer-events:none;transition:border-color .3s}
-.lab::after{content:"";position:absolute;top:-1px;left:50%;width:46px;height:10px;transform:translateX(-50%);background:var(--blauw);border-radius:0 0 4px 4px}
-.lab:nth-child(even){transform:rotate(.6deg)}
-.lab:nth-child(3n){transform:rotate(-.7deg)}
-.lab:hover{transform:rotate(0) translateY(-4px);box-shadow:0 26px 50px -32px rgba(20,33,58,.45)}
-.lab:hover::before{border-color:var(--rood)}
-.lab svg{width:36px;height:36px;color:var(--blauw);margin-bottom:16px}
-.lab h3{margin-bottom:.35em}
-.lab p{color:var(--muted);font-size:16px;margin:0}
-.nog{margin-top:54px;display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;text-align:center}
-.nog p{font:600 1.3rem var(--hf);color:var(--ink);margin:0}
-
-.verhaal .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
-.verhaal-foto{position:relative}
-.verhaal-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 26px 26px}
-.badge{position:absolute;right:-24px;bottom:40px;width:150px;height:150px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;box-shadow:0 20px 40px -20px rgba(20,33,58,.45)}
-.badge::before{content:"";position:absolute;inset:8px;border:2px dashed var(--rood);border-radius:50%}
-.badge b{display:block;font:700 2.3rem/1 var(--hf);color:var(--blauw)}
-.badge span{font-size:13px;font-weight:700;color:var(--muted);line-height:1.2}
-.tijd{list-style:none;margin:34px 0;padding:0}
-.tijd li{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:20px 0;border-top:1.5px dashed var(--line)}
-.tijd li:last-child{border-bottom:1.5px dashed var(--line)}
-.tijd .j{font:700 1.05rem var(--hf);color:var(--blauw)}
-.tijd b{display:block;font:600 1.12rem var(--hf);color:var(--ink);margin-bottom:2px}
-.tijd span{color:var(--muted);font-size:16.5px}
-
-.werk{background:var(--blauw-l)}
-.stappen{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;list-style:none;margin:0;padding:0;position:relative}
-.stappen::before{content:"";position:absolute;left:16%;right:16%;top:46px;height:2px;background:repeating-linear-gradient(90deg,var(--rood) 0 10px,transparent 10px 16px)}
-.stappen li{position:relative;text-align:center}
-.knoop{position:relative;width:92px;height:92px;margin:0 auto 26px;border-radius:50%;background:var(--blauw);display:grid;place-items:center;box-shadow:inset 0 0 0 7px var(--blauw-d),0 14px 28px -14px rgba(20,58,108,.7)}
-.knoop i{position:absolute;width:11px;height:11px;border-radius:50%;background:#fff}
-.knoop i:nth-child(1){top:30px;left:30px}.knoop i:nth-child(2){top:30px;right:30px}.knoop i:nth-child(3){bottom:30px;left:30px}.knoop i:nth-child(4){bottom:30px;right:30px}
-.knoop::after,.knoop::before{content:"";position:absolute;width:30px;height:2.5px;background:var(--rood);transform:rotate(45deg)}
-.knoop::before{transform:rotate(-45deg)}
-.stap-nr{font:700 13px var(--bf);letter-spacing:.14em;color:var(--rood)}
-.stappen h3{margin:.35em 0 .4em}
-.stappen p{color:var(--muted);margin:0 auto;max-width:22em}
-
-.inloop .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.hang{position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;padding:60px 44px 40px;box-shadow:0 30px 60px -36px rgba(20,33,58,.5);transform:rotate(-1.5deg);width:100%;max-width:470px;justify-self:center;margin-top:60px}
-.hang::before{content:"";position:absolute;top:22px;left:50%;width:22px;height:22px;transform:translateX(-50%);border-radius:50%;border:3px solid var(--line);background:var(--blauw-l)}
-.hang::after{content:"";position:absolute;bottom:calc(100% - 33px);left:50%;width:2px;height:90px;background:var(--rood);transform:translateX(-50%) rotate(8deg);transform-origin:bottom}
-.hang h3{text-align:center;font-size:1.5rem;margin:6px 0 18px}
-.hang dl{margin:0 0 18px}
-.hang div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1.5px dashed var(--line);font-weight:600;color:var(--ink)}
-.hang dd{margin:0;color:var(--blauw);font-weight:700}
-.hang .dicht dd{color:var(--muted);font-weight:600}
-.hang p{display:flex;gap:10px;color:var(--muted);font-size:15.5px;margin:0}
-.hang p .ic{color:var(--rood)}
-
-.contact{background:linear-gradient(#fff 0 40%,var(--blauw-l) 40%)}
-.contact-kaart{background:#fff;border:1px solid var(--line);border-radius:30px;padding:56px;display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;box-shadow:0 40px 80px -50px rgba(20,33,58,.45)}
-.cinfo{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
-.cinfo li{display:flex;gap:12px;align-items:center;font-weight:600}
-.cinfo a{color:var(--blauw);text-decoration:none}
-.cinfo .ic{color:var(--rood)}
-.form{display:grid;gap:16px}
-.rij{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form label{display:flex;flex-direction:column;gap:6px;font:700 14px var(--bf);color:var(--ink)}
-.form input,.form select,.form textarea{font:500 16px var(--bf);padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fbfcfe;color:var(--ink);width:100%}
-.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--blauw);background:#fff}
-.form .btn{justify-self:start}
-.fmsg{margin:0;font-weight:700;color:var(--blauw)}
-
-.ft{background:var(--blauw);color:rgba(255,255,255,.8);padding:70px 0 28px;font-size:15.5px}
-.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
-.ft h4{font:700 13px var(--bf);letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 16px}
-.ft ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
-.ft a{text-decoration:none}.ft a:hover{color:#fff}
-.ft-logo{height:42px;width:auto;margin-bottom:16px}
-.ft-bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:50px;padding-top:22px;border-top:1.5px dashed rgba(255,255,255,.25);font-size:14px}
-
-.mbar{display:none}
-
-@media (max-width:1060px){
- .hd nav{display:none}.hd-tel span{display:none}.hd-tel{margin-left:auto;width:46px;height:46px;border:1.5px solid var(--line);border-radius:50%;justify-content:center}
- .hero .wrap,.verhaal .wrap,.inloop .wrap{grid-template-columns:1fr}
- .ring-zone{margin-top:50px}
- .amb-rij{grid-template-columns:1fr}
- .labels{grid-template-columns:1fr 1fr}
- .contact-kaart{grid-template-columns:1fr;padding:40px}
- .verhaal-foto{max-width:460px}
- .ft-grid{grid-template-columns:1fr 1fr}
-}
-@media (max-width:680px){
- body{font-size:17px}
- .hd .btn{display:none}.hd .wrap{min-height:68px}.label-logo{padding:7px 14px}.label-logo img{height:30px}
- .hero{padding-top:44px}
- .hero-feiten{flex-direction:column;width:100%}.hero-feiten div{border-right:0;border-bottom:1px dashed var(--line)}
- .naald{width:80px;height:80px}
- .studio{grid-template-columns:1fr}
- .sec{padding:80px 0}
- .amb{grid-template-columns:1fr;padding:26px}
- .amb-foto{width:140px}
- .labels{grid-template-columns:1fr}
- .lab:nth-child(n){transform:none}
- .stappen{grid-template-columns:1fr;gap:44px}.stappen::before{display:none}
- .tijd li{grid-template-columns:1fr;gap:4px}
- .badge{right:8px;width:120px;height:120px}.badge b{font-size:1.9rem}
- .hang{padding:56px 24px 30px;transform:none}
- .contact-kaart{padding:28px 20px;border-radius:22px}
- .rij{grid-template-columns:1fr}
- .ft-grid{grid-template-columns:1fr}
- .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:70;box-shadow:0 -6px 20px rgba(0,0,0,.12)}
- .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;font-weight:700;text-decoration:none}
- .mbar .t{background:#fff;color:var(--blauw);border-top:1px solid var(--line)}.mbar .o{background:var(--rood);color:#fff}
- body{padding-bottom:56px}
-}
-</style>
+<link rel="stylesheet" href="./site.css">
 </head>
 <body id="top">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -230,20 +15,30 @@ p{margin:0 0 1em}
  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
  <symbol id="i-pijl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+ <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+ <symbol id="i-vink" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5 9-10"/></symbol>
 </svg>
-
 <div class="np">Ontwerpvoorstel door Newporter <span>— dit is (nog) niet de live website van Borduurhuis.nl</span></div>
-
 <header class="hd">
  <div class="wrap">
-  <a class="label-logo" href="#top" aria-label="Borduurhuis.nl, naar boven"><img src="https://borduurhuis.com/cdn/shop/files/logo_wit_110_pt_62b2e115-f1a1-4174-be27-9c5017201047.png?height=100&amp;v=1765898234" width="300" height="100" alt="Borduurhuis.nl" onerror="this.replaceWith(document.createTextNode('Borduurhuis.nl'))"></a>
-  <nav aria-label="Hoofdmenu"><a href="#ambacht">Borduren &amp; drukken</a><a href="#maken">Alles wat we maken</a><a href="#verhaal">Over ons</a><a href="#inloop">Openingstijden</a></nav>
+  <a class="label-logo" href="./" aria-label="Borduurhuis.nl, naar de homepage"><img src="https://borduurhuis.com/cdn/shop/files/logo_wit_110_pt_62b2e115-f1a1-4174-be27-9c5017201047.png?height=100&amp;v=1765898234" width="300" height="100" alt="Borduurhuis.nl" onerror="this.replaceWith(document.createTextNode('Borduurhuis.nl'))"></a>
+  <nav aria-label="Hoofdmenu"><a href="./borduren/">Borduren</a><a href="./textieldruk/">Textieldruk</a><a href="./assortiment/">Alles wat we maken</a><a href="./over-ons/">Over ons</a><a href="./contact/">Contact</a></nav>
   <a class="hd-tel" href="tel:+31135431348" aria-label="Bel 013 543 13 48"><svg class="ic"><use href="#i-tel"/></svg><span>013 543 13 48</span></a>
-  <a class="btn btn-rood" href="#contact">Offerte aanvragen</a>
+  <a class="btn btn-rood" href="./contact/">Offerte aanvragen</a>
+  <button class="menu-knop" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="lade"><svg><use href="#i-menu"/></svg></button>
  </div>
 </header>
-
+<div class="lade" id="lade" aria-hidden="true">
+ <div class="lade-in" role="dialog" aria-label="Menu">
+  <div class="lade-top"><b>Menu</b><button class="menu-knop" type="button" data-sluit aria-label="Menu sluiten" style="display:inline-flex"><svg><use href="#i-x"/></svg></button></div>
+  <a class="l" href="./" aria-current="page">Home<svg class="ic"><use href="#i-pijl"/></svg></a><a class="l" href="./borduren/">Borduren<svg class="ic"><use href="#i-pijl"/></svg></a><a class="l" href="./textieldruk/">Textieldruk<svg class="ic"><use href="#i-pijl"/></svg></a><a class="l" href="./assortiment/">Alles wat we maken<svg class="ic"><use href="#i-pijl"/></svg></a><a class="l" href="./over-ons/">Over ons<svg class="ic"><use href="#i-pijl"/></svg></a><a class="l" href="./contact/">Contact<svg class="ic"><use href="#i-pijl"/></svg></a>
+  <a class="btn btn-rood" href="./contact/">Offerte aanvragen</a>
+  <a class="btn btn-lijn" href="tel:+31135431348"><svg class="ic"><use href="#i-tel"/></svg>013 543 13 48</a>
+ </div>
+</div>
 <main>
+
 <section class="hero linnen">
  <div class="wrap">
   <div>
@@ -297,14 +92,14 @@ p{margin:0 0 1em}
     <div><span class="amb-nr">01</span><h3>Borduren</h3>
      <p>Uw naam, tekst of logo machinaal geborduurd op kleding, badtextiel en tafellinnen. Een naam kan al vanaf 1 stuk, ook voor een heel team.</p>
      <ul class="tags"><li>Logo's</li><li>Namen</li><li>Emblemen</li><li>Geweven labels</li></ul>
-     <a class="pijl" href="#contact">Offerte voor borduren <svg class="ic"><use href="#i-pijl"/></svg></a></div>
+     <a class="pijl" href="./borduren/">Meer over borduren <svg class="ic"><use href="#i-pijl"/></svg></a></div>
    </article>
    <article class="amb">
     <div class="amb-foto"><img src="https://images.unsplash.com/photo-1773525912431-ee1eff5e1ab9?auto=format&amp;fit=crop&amp;w=500&amp;h=500&amp;q=70" width="500" height="500" alt="Zeefdrukmachine in de werkplaats" loading="lazy"></div>
     <div><span class="amb-nr">02</span><h3>Textieldruk</h3>
      <p>Liever bedrukt? We drukken uw ontwerp op T-shirts, polo's, sweaters en hoodies. Ook als actiepakket.</p>
      <ul class="tags"><li>Flexdruk</li><li>Zeefdruk</li><li>DTF</li></ul>
-     <a class="pijl" href="#contact">Offerte voor textieldruk <svg class="ic"><use href="#i-pijl"/></svg></a></div>
+     <a class="pijl" href="./textieldruk/">Meer over textieldruk <svg class="ic"><use href="#i-pijl"/></svg></a></div>
    </article>
   </div>
  </div>
@@ -314,14 +109,14 @@ p{margin:0 0 1em}
  <div class="wrap">
   <div class="sec-head mid"><p class="kicker">En verder</p><h2>Wij zetten het op <span class="b">vrijwel alles</span></h2><p>Van autobelettering tot een geboortesticker. Voor grote en kleine aantallen.</p></div>
   <div class="labels">
-   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 16V9l3-4h9l4 4h2v7h-2M3 16h2m4 0h6"/><circle cx="7" cy="16.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="16.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><h3>Belettering en sign</h3><p>Auto's, caravans, reclameborden en lichtbakken. Ook spandoeken, vlaggen, beachflags en displays.</p></article>
-   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 3h6v6l2 3H7l2-3zM5 14h14v4H5zM8 21h8"/></svg><h3>Drukwerk en stempels</h3><p>Visitekaartjes, briefpapier, enveloppen, flyers, posters, rolbanners en bedrijfsstempels.</p></article>
-   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 10h16v10H4zM3 7h18v3H3zM12 7v13M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0"/></svg><h3>Relatiegeschenken</h3><p>Pennen, keycords, katoenen draagtassen, buttons en fansjaals met uw naam of logo.</p></article>
-   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.5" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 20c0-3 2-5 5-5s5 2 5 5"/></svg><h3>Geboorte en baby</h3><p>Geboortestickers, knuffels met naam, tutpopjes, rompertjes en slabbetjes.</p></article>
-   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 6h11v9a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4zM16 9h2a2 2 0 0 1 0 4h-2"/></svg><h3>Fotoproducten</h3><p>Bekers, onderzetters, sleutelhangers, tegeltjes en borrelplanken met uw eigen foto of tekst.</p></article>
-   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 8V3h10v5M5 8h14a2 2 0 0 1 2 2v6h-4M7 16H3v-6a2 2 0 0 1 2-2M7 13h10v8H7z"/></svg><h3>Print en copy</h3><p>Printen en kopiëren, ook bouwtekeningen. Gewoon bij ons in Tilburg.</p></article>
+   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 16V9l3-4h9l4 4h2v7h-2M3 16h2m4 0h6"/><circle cx="7" cy="16.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="16.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><h3><a href="./assortiment/#belettering" style="text-decoration:none">Belettering en sign</a></h3><p>Auto's, caravans, reclameborden en lichtbakken. Ook spandoeken, vlaggen, beachflags en displays.</p></article>
+   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M9 3h6v6l2 3H7l2-3zM5 14h14v4H5zM8 21h8"/></svg><h3><a href="./assortiment/#drukwerk" style="text-decoration:none">Drukwerk en stempels</a></h3><p>Visitekaartjes, briefpapier, enveloppen, flyers, posters, rolbanners en bedrijfsstempels.</p></article>
+   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 10h16v10H4zM3 7h18v3H3zM12 7v13M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0"/></svg><h3><a href="./assortiment/#relatiegeschenken" style="text-decoration:none">Relatiegeschenken</a></h3><p>Pennen, keycords, katoenen draagtassen, buttons en fansjaals met uw naam of logo.</p></article>
+   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.5" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 20c0-3 2-5 5-5s5 2 5 5"/></svg><h3><a href="./assortiment/#geboorte" style="text-decoration:none">Geboorte en baby</a></h3><p>Geboortestickers, knuffels met naam, tutpopjes, rompertjes en slabbetjes.</p></article>
+   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 6h11v9a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4zM16 9h2a2 2 0 0 1 0 4h-2"/></svg><h3><a href="./assortiment/#fotoproducten" style="text-decoration:none">Fotoproducten</a></h3><p>Bekers, onderzetters, sleutelhangers, tegeltjes en borrelplanken met uw eigen foto of tekst.</p></article>
+   <article class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 8V3h10v5M5 8h14a2 2 0 0 1 2 2v6h-4M7 16H3v-6a2 2 0 0 1 2-2M7 13h10v8H7z"/></svg><h3><a href="./assortiment/#print-en-copy" style="text-decoration:none">Print en copy</a></h3><p>Printen en kopiëren, ook bouwtekeningen. Gewoon bij ons in Tilburg.</p></article>
   </div>
-  <div class="nog"><p>Staat het er niet tussen? Vraag het ons gewoon.</p><a class="btn btn-rood" href="#contact">Vraag een offerte aan</a></div>
+  <div class="nog"><p>Staat het er niet tussen? Vraag het ons gewoon.</p><div class="ctas"><a class="btn btn-lijn" href="./assortiment/">Bekijk alles wat we maken</a><a class="btn btn-rood" href="./contact/">Vraag een offerte aan</a></div></div>
  </div>
 </section>
 
@@ -341,7 +136,7 @@ p{margin:0 0 1em}
     <li><span class="j">Daarna</span><div><b>Meer dan textiel</b><span>Autobelettering, borden, spandoeken, drukwerk en promotieartikelen.</span></div></li>
     <li><span class="j">Nu</span><div><b>Professor Verbernelaan, Tilburg</b><span>Voor particulieren, verenigingen en bedrijven.</span></div></li>
    </ol>
-   <a class="btn btn-rood" href="#contact">Vraag een offerte aan</a>
+   <a class="btn btn-lijn" href="./over-ons/">Lees ons verhaal <svg class="ic"><use href="#i-pijl"/></svg></a>
   </div>
  </div>
 </section>
@@ -362,7 +157,7 @@ p{margin:0 0 1em}
   <div><p class="kicker">Vrije inloop</p><h2>Gewoon even <span class="b">binnenlopen?</span></h2><p style="font-size:1.12rem">Kom langs met uw idee, uw kleding of uw logo. Zonder afspraak, op de Professor Verbernelaan in Tilburg. Past het niet binnen deze tijden? Maak dan een afspraak.</p><div class="ctas"><a class="btn btn-rood" href="tel:+31135431348"><svg class="ic"><use href="#i-tel"/></svg>Bel 013 543 13 48</a></div></div>
   <div class="hang"><h3>Openingstijden</h3>
    <dl><div><dt>Dinsdag t/m vrijdag</dt><dd>14:00 – 17:30</dd></div><div><dt>Zaterdag</dt><dd>12:00 – 15:00</dd></div><div class="dicht"><dt>Zondag en maandag</dt><dd>gesloten</dd></div></dl>
-   <p><svg class="ic"><use href="#i-pin"/></svg>Professor Verbernelaan 102, 5037 AK Tilburg</p></div>
+   <p><svg class="ic"><use href="#i-pin"/></svg>Professor Verbernelaan 102, 5037 AK Tilburg</p><a class="route" href="https://www.google.com/maps/dir/?api=1&destination=Professor+Verbernelaan+102+5037+AK+Tilburg" target="_blank" rel="noopener">Plan uw route <svg class="ic"><use href="#i-pijl"/></svg></a></div>
  </div>
 </section>
 
@@ -371,42 +166,70 @@ p{margin:0 0 1em}
   <div class="contact-kaart">
    <div><p class="kicker">Contact</p><h2>Offerte of <span class="b">vraag?</span></h2><p>Vertel kort wat u wilt laten maken. Een logo of voorbeeld meesturen kan ook.</p>
     <ul class="cinfo"><li><svg class="ic"><use href="#i-tel"/></svg><a href="tel:+31135431348">013 543 13 48</a></li><li><svg class="ic"><use href="#i-tel"/></svg><a href="tel:+31620530635">06 20 530 635</a></li><li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:info@borduurhuis.nl">info@borduurhuis.nl</a></li><li><svg class="ic"><use href="#i-pin"/></svg><span>Professor Verbernelaan 102, 5037 AK Tilburg</span></li></ul></div>
-   <form class="form" onsubmit="this.querySelector('.fmsg').hidden=false;return false">
-    <div class="rij"><label>Naam<input name="naam" autocomplete="name" required></label><label>Telefoon<input name="telefoon" type="tel" autocomplete="tel"></label></div>
-    <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
-    <div class="rij"><label>Waarvoor?<select name="dienst"><option>Borduren</option><option>Textieldruk</option><option>Emblemen</option><option>Kleding en textiel</option><option>Belettering en sign</option><option>Drukwerk en stempels</option><option>Relatiegeschenken</option><option>Geboorte en baby</option><option>Iets anders</option></select></label><label>Aantal stuks<input name="aantal" inputmode="numeric" placeholder="Bijv. 12"></label></div>
-    <label>Uw vraag<textarea name="bericht" rows="4"></textarea></label>
-    <button class="btn btn-rood" type="submit">Verstuur uw aanvraag</button>
-    <p class="fmsg" hidden>Dit is een ontwerpvoorstel: het formulier verstuurt nog niets.</p>
+   <div class="form-wrap">
+   <form class="form" novalidate data-form>
+    <div class="rij"><label>Naam<input name="naam" autocomplete="name" required><span class="fout">Vul uw naam in.</span></label><label>Telefoon<input name="telefoon" type="tel" autocomplete="tel"></label></div>
+    <label>E-mail<input name="email" type="email" autocomplete="email" required><span class="fout">Vul een geldig e-mailadres in.</span></label>
+    <div class="rij"><label>Waarvoor?<select name="dienst"><option>Borduren</option><option>Textieldruk</option><option>Emblemen</option><option>Kleding en textiel</option><option>Belettering en sign</option><option>Drukwerk en stempels</option><option>Relatiegeschenken</option><option>Geboorte en baby</option><option>Fotoproducten</option><option>Print en copy</option><option>Iets anders</option></select></label><label>Aantal stuks<input name="aantal" inputmode="numeric" placeholder="Bijv. 12"></label></div>
+    <label>Uw vraag<textarea name="bericht" rows="4" placeholder="Bijv. 12 polo's met ons logo op de borst en namen op de rug"></textarea></label>
+    
+    <button class="btn btn-rood" type="submit">Verstuur uw aanvraag <svg class="ic"><use href="#i-pijl"/></svg></button>
    </form>
+   <div class="form-ok" role="status" aria-live="polite">
+    <div class="vink"><svg><use href="#i-vink"/></svg></div>
+    <h3>Bedankt<span data-naam></span>!</h3>
+    <p>Uw aanvraag voor <b data-dienst>borduren</b> is ontvangen. We nemen zo snel mogelijk contact met u op.</p>
+    <a class="btn btn-lijn" href="tel:+31135431348"><svg class="ic"><use href="#i-tel"/></svg>Liever direct bellen? 013 543 13 48</a>
+    <small>Ontwerpvoorstel: in deze preview wordt er nog niets verstuurd.</small>
+   </div>
+  </div>
   </div>
  </div>
 </section>
 </main>
-
 <footer class="ft">
  <div class="wrap">
   <div class="ft-grid">
    <div><img class="ft-logo" src="https://borduurhuis.com/cdn/shop/files/logo_wit_110_pt_62b2e115-f1a1-4174-be27-9c5017201047.png?height=100&amp;v=1765898234" width="300" height="100" alt="Borduurhuis.nl" loading="lazy" onerror="this.outerHTML='<p style=&quot;font:700 1.3rem Outfit,sans-serif;color:#fff&quot;>Borduurhuis.nl</p>'"><p>Borduren, textieldruk, belettering, drukwerk en stempels in Tilburg. Voor particulier en bedrijf, vanaf één stuk.</p></div>
-   <div><h4>Wat we maken</h4><ul><li><a href="#ambacht">Borduren</a></li><li><a href="#ambacht">Textieldruk</a></li><li><a href="#maken">Belettering en sign</a></li><li><a href="#maken">Drukwerk en stempels</a></li></ul></div>
-   <div><h4>Borduurhuis.nl</h4><ul><li><a href="#verhaal">Over ons</a></li><li><a href="#werkwijze">Werkwijze</a></li><li><a href="#inloop">Openingstijden</a></li><li><a href="#contact">Contact</a></li></ul></div>
-   <div><h4>Contact</h4><ul><li><a href="tel:+31135431348">013 543 13 48</a></li><li><a href="mailto:info@borduurhuis.nl">info@borduurhuis.nl</a></li><li>Professor Verbernelaan 102<br>5037 AK Tilburg</li></ul></div>
+   <div><h4>Wat we maken</h4><ul><li><a href="./borduren/">Borduren</a></li><li><a href="./textieldruk/">Textieldruk</a></li><li><a href="./assortiment/#belettering">Belettering en sign</a></li><li><a href="./assortiment/#drukwerk">Drukwerk en stempels</a></li><li><a href="./assortiment/">Alles wat we maken</a></li></ul></div>
+   <div><h4>Borduurhuis.nl</h4><ul><li><a href="./over-ons/">Over ons</a></li><li><a href="./over-ons/#werkwijze">Werkwijze</a></li><li><a href="./contact/#openingstijden">Openingstijden</a></li><li><a href="./contact/">Contact</a></li></ul></div>
+   <div><h4>Contact</h4><ul><li><a href="tel:+31135431348">013 543 13 48</a></li><li><a href="tel:+31620530635">06 20 530 635</a></li><li><a href="mailto:info@borduurhuis.nl">info@borduurhuis.nl</a></li><li>Professor Verbernelaan 102<br>5037 AK Tilburg</li></ul></div>
   </div>
-  <div class="ft-bot"><span>© Borduurhuis.nl · Tilburg · KvK 18047444</span><span><a href="#top">Privacyverklaring</a> · <a href="#top">Algemene voorwaarden</a></span></div>
+  <div class="ft-bot"><span>© Borduurhuis.nl · Tilburg · KvK 18047444</span><span><a href="https://webwinkel.borduurhuis.nl/Algemene-voorwaarden" target="_blank" rel="noopener">Algemene voorwaarden</a></span></div>
  </div>
 </footer>
-
-<nav class="mbar" aria-label="Snel contact"><a class="t" href="tel:+31135431348"><svg class="ic"><use href="#i-tel"/></svg>Bellen</a><a class="o" href="#contact">Offerte</a></nav>
-
+<nav class="mbar" aria-label="Snel contact"><a class="t" href="tel:+31135431348"><svg class="ic"><use href="#i-tel"/></svg>Bellen</a><a class="o" href="./contact/">Offerte</a></nav>
 <script>
 (function(){
+ var lade=document.getElementById('lade'),open=document.querySelector('.hd .menu-knop');
+ function zet(a){lade.classList.toggle('open',a);lade.setAttribute('aria-hidden',!a);open.setAttribute('aria-expanded',a);document.body.classList.toggle('vast',a);}
+ open.addEventListener('click',function(){zet(true)});
+ lade.addEventListener('click',function(e){if(e.target===lade||e.target.closest('[data-sluit]'))zet(false)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')zet(false)});
+ var q=new URLSearchParams(location.search).get('dienst');
+ document.querySelectorAll('[data-form]').forEach(function(f){
+  var s=f.querySelector('select[name=dienst]');
+  if(q){for(var i=0;i<s.options.length;i++){if(s.options[i].text.toLowerCase()===q.toLowerCase())s.selectedIndex=i;}}
+  f.addEventListener('submit',function(e){
+   e.preventDefault();var ok=true;
+   [['naam',function(v){return v.trim().length>1}],['email',function(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)}]].forEach(function(r){
+    var el=f.elements[r[0]],l=el.closest('label'),g=r[1](el.value);l.classList.toggle('ongeldig',!g);if(!g&&ok){el.focus();ok=false;}});
+   if(!ok)return;
+   var w=f.parentNode,k=w.querySelector('.form-ok');
+   k.querySelector('[data-naam]').textContent=', '+f.elements.naam.value.trim().split(' ')[0];
+   k.querySelector('[data-dienst]').textContent=s.value.toLowerCase();
+   f.style.display='none';k.classList.add('zicht');k.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+ });
  var t=document.getElementById('naamTekst'),i=document.getElementById('naam');
- function fit(){var n=(i.value||'').trim()||'Uw naam';t.textContent=n;var s=54;t.setAttribute('font-size',s);try{while(t.getComputedTextLength()>250&&s>18){s--;t.setAttribute('font-size',s);}}catch(e){}}
- i.addEventListener('input',fit);
- document.querySelectorAll('.kleuren button').forEach(function(b){b.addEventListener('click',function(){
-  document.querySelectorAll('.kleuren button').forEach(function(x){x.setAttribute('aria-pressed','false')});
-  b.setAttribute('aria-pressed','true');t.setAttribute('fill',b.dataset.k);t.setAttribute('stroke',b.dataset.k);});});
- if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);else fit();
+ if(t&&i){
+  function fit(){var n=(i.value||'').trim()||'Uw naam';t.textContent=n;var s=54;t.setAttribute('font-size',s);try{while(t.getComputedTextLength()>250&&s>18){s--;t.setAttribute('font-size',s);}}catch(e){}}
+  i.addEventListener('input',fit);
+  document.querySelectorAll('.kleuren button').forEach(function(b){b.addEventListener('click',function(){
+   document.querySelectorAll('.kleuren button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+   b.setAttribute('aria-pressed','true');t.setAttribute('fill',b.dataset.k);t.setAttribute('stroke',b.dataset.k);});});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);else fit();
+ }
 })();
 </script>
 </body>
