@@ -59,21 +59,6 @@ p{margin:0 0 1em}
 .hero-feiten b{display:block;font:700 1.25rem/1.1 var(--hf);color:var(--blauw)}
 .hero-feiten span{font-size:14px;color:var(--muted)}
 
-.ring-zone{position:relative;display:flex;flex-direction:column;align-items:center}
-.ring{position:relative;width:min(470px,86%);aspect-ratio:1;border-radius:50%;background:#1d4f91;
- box-shadow:0 0 0 14px #d8b88a,0 0 0 17px #b8925f,0 0 0 26px #e7cfa7,0 0 0 28px #c39c69,0 40px 70px -20px rgba(20,33,58,.45)}
-.ring::before{content:"";position:absolute;inset:0;border-radius:50%;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px)}
-.ring-schroef{position:absolute;top:-44px;left:50%;transform:translateX(-50%);width:34px;height:22px;background:#c39c69;border-radius:6px 6px 2px 2px;box-shadow:inset 0 -6px 0 #a87f4e}
-.ring svg.borst{position:absolute;inset:0;width:100%;height:100%}
-.naald{position:absolute;right:2%;top:4%;width:120px;height:120px;pointer-events:none}
-.studio{position:relative;margin-top:58px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;box-shadow:0 18px 40px -26px rgba(20,33,58,.4);width:min(500px,100%)}
-.studio label{font:700 12.5px var(--bf);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;gap:7px}
-.studio input{font:600 17px var(--bf);padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;width:100%;color:var(--ink);letter-spacing:0;text-transform:none}
-.studio input:focus{outline:none;border-color:var(--blauw)}
-.kleuren{display:flex;gap:8px;padding-bottom:7px}
-.kleuren button{width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1.5px var(--line);cursor:pointer;padding:0}
-.kleuren button[aria-pressed=true]{box-shadow:0 0 0 2.5px var(--rood)}
-.studio small{grid-column:1/-1;color:var(--muted);font-size:13px;margin-top:-4px}
 
 .lint{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;background:#fff}
 .lint-in{display:inline-flex;animation:lint 40s linear infinite;padding:20px 0}
@@ -91,7 +76,7 @@ p{margin:0 0 1em}
 .amb-rij{display:grid;grid-template-columns:1fr 1fr;gap:34px}
 .amb{position:relative;border:1px solid var(--line);border-radius:26px;padding:34px;background:#fff;display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:center;transition:box-shadow .3s,transform .3s}
 .amb:hover{box-shadow:0 30px 60px -36px rgba(20,33,58,.45);transform:translateY(-3px)}
-.amb-foto{position:relative;width:184px;margin:8px;aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 7px #e7cfa7,0 0 0 9px #c39c69}
+.amb-foto{position:relative;width:200px;aspect-ratio:1;border-radius:18px;overflow:hidden}
 .amb-foto img{width:100%;height:100%;object-fit:cover}
 .amb-nr{font:700 13px var(--bf);letter-spacing:.14em;color:var(--rood)}
 .amb h3{font-size:1.75rem;margin:.3em 0 .35em}
@@ -181,7 +166,6 @@ p{margin:0 0 1em}
 @media (max-width:1060px){
  .hd nav{display:none}.hd-tel span{display:none}.hd-tel{margin-left:auto;width:46px;height:46px;border:1.5px solid var(--line);border-radius:50%;justify-content:center}
  .hero .wrap,.verhaal .wrap,.inloop .wrap{grid-template-columns:1fr}
- .ring-zone{margin-top:50px}
  .amb-rij{grid-template-columns:1fr}
  .labels{grid-template-columns:1fr 1fr}
  .contact-kaart{grid-template-columns:1fr;padding:40px}
@@ -193,11 +177,9 @@ p{margin:0 0 1em}
  .hd .btn{display:none}.hd .wrap{min-height:68px}.label-logo{padding:7px 14px}.label-logo img{height:30px}
  .hero{padding-top:44px}
  .hero-feiten{flex-direction:column;width:100%}.hero-feiten div{border-right:0;border-bottom:1px dashed var(--line)}
- .naald{width:80px;height:80px}
- .studio{grid-template-columns:1fr}
  .sec{padding:80px 0}
  .amb{grid-template-columns:1fr;padding:26px}
- .amb-foto{width:140px}
+ .amb-foto{position:relative;width:200px;aspect-ratio:1;border-radius:18px;overflow:hidden}
  .labels{grid-template-columns:1fr}
  .lab:nth-child(n){transform:none}
  .stappen{grid-template-columns:1fr;gap:44px}.stappen::before{display:none}
@@ -236,7 +218,7 @@ body.vast{overflow:hidden}
 .phero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 .phero h1{font-size:clamp(2.5rem,5vw,4.2rem);font-weight:700;letter-spacing:-.04em;line-height:1}
 .phero h1 .b{color:var(--blauw)}
-.phero-foto{position:relative;justify-self:center;width:min(400px,100%);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 12px #d8b88a,0 0 0 15px #b8925f,0 0 0 23px #e7cfa7,0 0 0 25px #c39c69,0 34px 60px -24px rgba(20,33,58,.45);margin:26px}
+.phero-foto{position:relative;justify-self:end;width:min(460px,100%);aspect-ratio:5/4;border-radius:24px;overflow:hidden;box-shadow:0 34px 60px -30px rgba(20,33,58,.45)}
 .phero-foto img{width:100%;height:100%;object-fit:cover}
 
 /* inhoudsblokken */
@@ -290,7 +272,7 @@ body.vast{overflow:hidden}
 @media (max-width:1060px){
  .menu-knop{display:inline-flex}
  .phero .wrap,.duo,.cat{grid-template-columns:1fr;gap:34px}
- .phero-foto{width:min(300px,80%)}
+ .phero-foto{position:relative;justify-self:end;width:min(460px,100%);aspect-ratio:5/4;border-radius:24px;overflow:hidden;box-shadow:0 34px 60px -30px rgba(20,33,58,.45)}
  .tech{grid-template-columns:1fr}
  .cat-nav{top:99px}
 }
@@ -302,3 +284,79 @@ body.vast{overflow:hidden}
  .cat-nav{top:99px}
  .kaart{padding:26px}
 }
+
+/* hero-beeld */
+.hero-beeld{position:relative;padding:0 0 60px 60px}
+.hb-groot{margin:0;border-radius:28px;overflow:hidden;aspect-ratio:9/11;box-shadow:0 40px 80px -40px rgba(20,33,58,.55)}
+.hb-groot img,.hb-klein img{width:100%;height:100%;object-fit:cover}
+.hb-klein{position:absolute;left:0;bottom:0;width:44%;aspect-ratio:1;margin:0;border-radius:22px;overflow:hidden;border:8px solid #fff;box-shadow:0 24px 50px -24px rgba(20,33,58,.5)}
+.hb-kaart{position:absolute;right:-18px;bottom:110px;display:flex;gap:14px;align-items:center;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 24px 50px -24px rgba(20,33,58,.45);max-width:290px}
+.hb-kaart b{display:block;font:700 1rem/1.25 var(--hf);color:var(--ink)}
+.hb-kaart span{font-size:13.5px;color:var(--muted)}
+.hb-ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--rood);color:#fff;display:grid;place-items:center}
+@media (max-width:1060px){.hero-beeld{max-width:560px;margin-top:20px}.hb-kaart{right:0}}
+@media (max-width:680px){
+ .hero-beeld{padding:0 0 40px 30px}
+ .hb-groot{aspect-ratio:4/3.4}
+ .hb-klein{width:40%;border-width:5px}
+ .hb-kaart{position:relative;right:auto;bottom:auto;margin:16px 0 0 -30px;max-width:none}
+}
+
+/* ===== rustiger, minder cartoon (19-11) — huisstijl uit hun logo ===== */
+:root{--blauw:#00339a;--blauw-d:#00276f;--blauw-l:#eef2fa;--rood:#e40100;--rood-h:#c20100;--ink:#0f1b33}
+.linnen{background-image:none;background-color:#fff}
+.phero.linnen,.sec.linnen{background:#f7f8fb}
+.kicker{color:var(--rood);letter-spacing:.14em}
+.kicker::before{width:22px;height:2px;background:var(--rood)}
+.hd-logo{display:flex;align-items:center;text-decoration:none}
+.hd-logo img{height:28px;width:auto}
+.hd nav a:hover,.hd nav a[aria-current=page]{color:var(--blauw);text-decoration:underline solid var(--rood) 2px;text-underline-offset:8px}
+.btn{border-radius:10px;font-weight:700}
+.btn-rood{box-shadow:none}
+.hero{padding:80px 0 70px}
+.hero h1{font-size:clamp(2.7rem,5.4vw,4.8rem);letter-spacing:-.04em;line-height:1.02}
+.hero-feiten{border-radius:12px}
+.hero-feiten div{border-right:1px solid var(--line)}
+.hb-groot{border-radius:20px}.hb-klein{border-radius:16px}
+.hb-ic{border-radius:10px}
+.lint{background:var(--blauw);border:0}
+.lint span{color:#fff}.lint span:nth-child(3n+2){color:#fff}
+.lint span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rood);margin:0 28px}
+.amb{border-radius:20px}
+.amb-foto{border-radius:14px}
+.tags li{border-radius:8px}
+.lab,.lab:nth-child(even),.lab:nth-child(3n){transform:none;border-radius:16px;padding:32px}
+.lab::before,.lab::after{display:none}
+.lab:hover{transform:translateY(-4px);border-color:#cfd8ea}
+.lab svg{width:44px;height:44px;padding:9px;border-radius:12px;background:var(--blauw-l)}
+.verhaal-foto img{border-radius:20px}
+.badge{border-radius:16px;width:auto;height:auto;padding:18px 22px;right:-20px}
+.badge::before{display:none}
+.tijd li{border-top:1px solid var(--line)}.tijd li:last-child{border-bottom:1px solid var(--line)}
+.werk{background:#f7f8fb}
+.stappen{counter-reset:s}
+.stappen li{counter-increment:s;text-align:left;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px}
+.stappen::before{display:none}
+.knoop{width:52px;height:52px;margin:0 0 22px;border-radius:12px;background:var(--blauw);box-shadow:none}
+.knoop i,.knoop::after{display:none}
+.knoop::before{content:counter(s);position:static;width:auto;height:auto;background:none;transform:none;font:700 1.35rem var(--hf);color:#fff}
+.stappen p{margin:0;max-width:none}
+.hang,.hang:hover{transform:none;border-radius:20px;padding:40px;margin-top:0;box-shadow:0 24px 50px -34px rgba(15,27,51,.4)}
+.hang::before,.hang::after{display:none}
+.hang h3{text-align:left}
+.hang div{border-bottom:1px solid var(--line)}
+.kaart::before,.cta-band::before,.form::before{display:none}
+.kaart{border-radius:18px}
+.chips li{border-radius:8px}
+.cta-band{border-radius:22px}
+.contact-kaart{border-radius:22px}
+.items li{border-radius:10px}
+.items li::before{width:8px;height:8px;border:0;background:var(--rood)}
+.lade a.l{border-bottom:1px solid var(--line)}
+.ft{background:var(--blauw-d)}
+.ft-logo{height:26px}
+.ft-bot{border-top:1px solid rgba(255,255,255,.18)}
+.form-ok .vink{box-shadow:none}
+.cat{border-bottom:1px solid var(--line)}
+@media (max-width:680px){.hd-logo img{height:21px}.hero{padding:44px 0 50px}.badge{right:10px}.stappen li{padding:24px}}
+@media (max-width:680px){.hb-klein{display:none}.hero-beeld{padding:0}.hb-kaart{margin:-40px 16px 0;position:relative}}
